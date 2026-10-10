@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#071b1b">
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noimageindex">
 <script>try{var _r=document.documentElement;_r.dataset.theme=localStorage.getItem("th")||"dark";}catch(e){document.documentElement.dataset.theme="dark"}document.documentElement.classList.add("ldg")</script>
 <title>Jerome Baluyut | IT Graduate | Systems Analysis · QA · UI/UX · Front-End</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23071b1b%22/%3E%3Cpath d=%22M9 21v-8a4 4 0 0 1 4-4h8M43 9h8a4 4 0 0 1 4 4v8M55 43v8a4 4 0 0 1-4 4h-8M21 55h-8a4 4 0 0 1-4-4v-8%22 fill=%22none%22 stroke=%22%23ff6b57%22 stroke-width=%223.2%22 stroke-linecap=%22round%22/%3E%3Ctext x=%2232%22 y=%2241.5%22 font-family=%22Arial Black,Arial,Helvetica,sans-serif%22 font-weight=%22900%22 font-size=%2225%22 text-anchor=%22middle%22 fill=%22%233dd6c6%22%3EJB%3C/text%3E%3C/svg%3E">
@@ -794,13 +797,14 @@ h1,h2,h3{font-family:"Space Grotesk","Bricolage Grotesque",system-ui,sans-serif}
 </div>
 </div>
 <button class="lskip" id="lskip" type="button" aria-label="Skip intro (Escape)">Skip Intro -&gt; <kbd>Esc</kbd></button>
-<script>(function(){var root=document.documentElement,d=document.getElementById('ld'),n=document.getElementById('lpct'),b=document.getElementById('lbar'),L=document.querySelectorAll('#ltm p'),C=document.querySelectorAll('#lch span'),st=document.getElementById('lst'),nm=document.getElementById('lnm'),sk=document.getElementById('lskip'),lsc=d.querySelector('.lsc'),r=matchMedia('(prefers-reduced-motion:reduce)').matches,p=0,k=0,si=-1,bst=0,raf=0,fin=0,tm=0,mx=-1,my=-1,NAME='Jerome Baluyut',GL='01<>/{}#$%&*=+ABCXYZ';
-d.appendChild(sk);window.__ldDone=0;
+<script>(function(){var root=document.documentElement,NAME='Jerome Baluyut',GL='01<>/{}#$%&*=+ABCXYZ',TPL=null;
+function start(d,replay){var n=document.getElementById('lpct'),b=document.getElementById('lbar'),L=document.querySelectorAll('#ltm p'),C=document.querySelectorAll('#lch span'),st=document.getElementById('lst'),nm=document.getElementById('lnm'),sk=document.getElementById('lskip'),lsc=d.querySelector('.lsc'),r=matchMedia('(prefers-reduced-motion:reduce)').matches,p=0,k=0,si=-1,bst=0,raf=0,fin=0,tm=0,mx=-1,my=-1;
+d.appendChild(sk);if(!replay)TPL=d.cloneNode(true);window.__ldDone=0;
 /* a refresh always replays the intro, so start at the top */
-if(!location.hash){try{scrollTo({top:0,behavior:'instant'})}catch(e){scrollTo(0,0)}addEventListener('load',function(){if(!location.hash&&!window.__ldDone)scrollTo({top:0,behavior:'instant'})})}
+if(!replay&&!location.hash){try{scrollTo({top:0,behavior:'instant'})}catch(e){scrollTo(0,0)}addEventListener('load',function(){if(!location.hash&&!window.__ldDone)scrollTo({top:0,behavior:'instant'})})}
 document.body.style.overflow='hidden';
 function esc(e){if(e.key==='Escape'){e.preventDefault();done()}}
-function done(){if(fin)return;fin=1;clearInterval(tm);removeEventListener('keydown',esc);window.__ldDone=1;bst=1;nm.textContent=NAME;d.classList.add('x');document.body.style.overflow='';root.classList.remove('ldg');try{dispatchEvent(new Event('ldDone'))}catch(e){}setTimeout(function(){cancelAnimationFrame(raf);d.remove()},520)}
+function done(){if(fin)return;fin=1;clearInterval(tm);removeEventListener('keydown',esc);window.__ldDone=1;bst=1;nm.textContent=NAME;d.classList.add('x');document.body.style.overflow='';root.classList.remove('ldg');if(!replay)try{dispatchEvent(new Event('ldDone'))}catch(e){}setTimeout(function(){cancelAnimationFrame(raf);d.remove()},520)}
 addEventListener('keydown',esc);sk.onclick=done;
 if(r){done();return}
 var MSG=[[0,'Booting portfolio'],[16,'Compiling 3 case studies'],[38,'Mounting 2 internships'],[60,'Running the last regression'],[82,'Polishing every pixel']];
@@ -829,7 +833,10 @@ tm=setInterval(function(){var u=Math.min(1,(performance.now()-t0)/DUR);p=100*(u*
  var s=Math.floor(p/17);while(k<=s&&k<L.length){L[k].classList.add('on');k++}
  var lit=Math.min(C.length,Math.floor(p/(100/C.length)));for(var q=0;q<C.length;q++)C[q].classList.toggle('on',q<lit);
  for(var m=MSG.length-1;m>=0;m--){if(p>=MSG[m][0]){if(si!==m){si=m;st.textContent=MSG[m][1]}break}}
- if(u>=1){clearInterval(tm);nm.textContent=NAME;for(var z=0;z<C.length;z++)C[z].classList.add('on');while(k<L.length){L[k].classList.add('on');k++}n.textContent='100';b.style.width='100%';d.classList.add('rdy');st.textContent='Access granted';setTimeout(done,750)}},40)})();</script>
+ if(u>=1){clearInterval(tm);nm.textContent=NAME;for(var z=0;z<C.length;z++)C[z].classList.add('on');while(k<L.length){L[k].classList.add('on');k++}n.textContent='100';b.style.width='100%';d.classList.add('rdy');st.textContent='Access granted';setTimeout(done,750)}},40)}
+start(document.getElementById('ld'),false);
+window.__replayIntro=function(){if(document.getElementById('ld')||!TPL)return;var c=TPL.cloneNode(true);document.body.insertBefore(c,document.body.firstChild);try{scrollTo({top:0,behavior:'instant'})}catch(x){scrollTo(0,0)}start(c,true)};
+})();</script>
 <div id="prog"></div><div id="spot"></div><div id="bgw"></div><div id="toast" role="status"></div>
 <nav id="rail" aria-label="Page sections"></nav>
 <div id="cur"><div><i></i><i></i><i></i><i></i></div></div><div id="cdot"></div><div id="cxy"></div>
@@ -837,7 +844,7 @@ tm=setInterval(function(){var u=Math.min(1,(performance.now()-t0)/DUR);p=100*(u*
 <div id="lb"><button class="lbx" type="button" aria-label="Close image">&#10005;</button><img alt=""><span class="lbh">Click image to zoom &middot; Esc to close</span></div>
 
 <header class="top"><div class="wrap"><nav>
-<b>jerome.baluyut</b>
+<b id="brand" role="button" tabindex="0" title="Replay intro" aria-label="jerome.baluyut, replay the intro animation">jerome.baluyut</b>
 <div class="links" id="lk">
 <a href="#services"><svg class="i"><use href="#layers"/></svg>Services</a>
 <a href="#experience"><svg class="i"><use href="#brief"/></svg>Experience</a>
@@ -943,14 +950,14 @@ tm=setInterval(function(){var u=Math.min(1,(performance.now()-t0)/DUR);p=100*(u*
 <div class="ccol">
 <a class="ct" href="#contact" data-c="mail"><span class="ci"><svg class="i"><use href="#mail"/></svg></span><span><b>Email me</b><small>Opens your email app</small></span><svg class="i ar"><use href="#arrow"/></svg></a>
 <a class="ct" href="#contact" data-c="viber"><span class="ci"><svg class="i"><use href="#chat"/></svg></span><span><b>Message on Viber</b><small>Best for quick questions</small></span><svg class="i ar"><use href="#arrow"/></svg></a>
-<a class="ct" href="https://www.linkedin.com/in/jerome-baluyut-497833403/" target="_blank" rel="noopener"><span class="ci"><svg class="i"><use href="#in"/></svg></span><span><b>Connect on LinkedIn</b><small>View my profile</small></span><svg class="i ar"><use href="#arrow"/></svg></a>
+<a class="ct" href="https://www.linkedin.com/in/jerome-baluyut-497833403/" target="_blank" rel="noopener noreferrer"><span class="ci"><svg class="i"><use href="#in"/></svg></span><span><b>Connect on LinkedIn</b><small>View my profile</small></span><svg class="i ar"><use href="#arrow"/></svg></a>
 <p class="loc"><svg class="i"><use href="#pin"/></svg> Based in Antipolo City, Rizal, Philippines</p>
 </div>
 <form class="cf" id="cf" novalidate>
-<div class="r2"><label>Name<input name="name" placeholder="Your name" autocomplete="name"></label><label>Email<input name="email" type="email" placeholder="you@company.com" autocomplete="email"></label></div>
+<div class="r2"><label>Name<input name="name" maxlength="80" placeholder="Your name" autocomplete="name"></label><label>Email<input name="email" type="email" maxlength="120" placeholder="you@company.com" autocomplete="email"></label></div>
 <div class="fld"><span class="lbl" id="ol">I'm reaching out about</span><div class="opts" id="opts" role="radiogroup" aria-labelledby="ol"><button type="button" role="radio" aria-checked="true">Systems Analyst role</button><button type="button" role="radio" aria-checked="false">Software QA role</button><button type="button" role="radio" aria-checked="false">UI/UX role</button><button type="button" role="radio" aria-checked="false">Front-End role</button><button type="button" role="radio" aria-checked="false">Other IT role</button><button type="button" role="radio" aria-checked="false">Freelance project</button><button type="button" role="radio" aria-checked="false">Something else</button></div></div>
-<label>Subject<input name="subject" placeholder="Optional, I'll add one for you"></label>
-<label>Message<textarea name="message" placeholder="Tell me about the role or project..."></textarea><small id="cnt">0 characters</small></label>
+<label>Subject<input name="subject" maxlength="120" placeholder="Optional, I'll add one for you"></label>
+<label>Message<textarea name="message" maxlength="2000" placeholder="Tell me about the role or project..."></textarea><small id="cnt">0 characters</small></label>
 <div class="row" style="justify-content:flex-start;margin:0"><button class="btn" type="submit"><svg class="i"><use href="#plane"/></svg>Send message</button><button class="btn alt" type="button" id="gm"><svg class="i"><use href="#mail"/></svg>Open in Gmail</button></div>
 <p class="fnote">Your message opens in your email, already filled in and addressed to me. Press send to deliver it.</p>
 </form>
@@ -961,7 +968,7 @@ tm=setInterval(function(){var u=Math.min(1,(performance.now()-t0)/DUR);p=100*(u*
 <div class="fg">
 <div><div class="fb">JB</div><b style="font:800 22px 'Bricolage Grotesque',sans-serif;color:#fff">Jerome J. Baluyut</b>
 <p style="margin:10px 0 16px;max-width:40ch">IT graduate open to Systems Analyst, Software QA, UI/UX, Front-End, and other IT roles.</p>
-<div class="fs"><a href="https://www.linkedin.com/in/jerome-baluyut-497833403/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#in"/></svg></a><a href="#contact" data-c="mail" aria-label="Email"><svg class="i"><use href="#mail"/></svg></a><a href="#contact" data-c="viber" aria-label="Viber"><svg class="i"><use href="#chat"/></svg></a></div></div>
+<div class="fs"><a href="https://www.linkedin.com/in/jerome-baluyut-497833403/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="i"><use href="#in"/></svg></a><a href="#contact" data-c="mail" aria-label="Email"><svg class="i"><use href="#mail"/></svg></a><a href="#contact" data-c="viber" aria-label="Viber"><svg class="i"><use href="#chat"/></svg></a></div></div>
 <div><h4>Explore</h4><a href="#services">Roles</a><a href="#experience">Experience</a><a href="#path">Roadmap</a><a href="#work">Projects</a><a href="#strengths">Skills</a><a href="#resume">Resume</a></div>
 <div><h4>Get in touch</h4><a href="#contact" data-c="mail">Email me</a><a href="#contact" data-c="viber">Message on Viber</a><a href="#contact">Contact form</a><span>Antipolo City, Rizal, PH</span></div>
 </div>
@@ -1012,31 +1019,75 @@ const E=[["Software Quality Assurance Intern","Isometric Diagonal Scheme Inc. (G
 E.forEach((e,i)=>{const a=document.createElement('article');a.tabIndex=0;a.dataset.tools=e[4].join('|');a.setAttribute('role','button');a.innerHTML='<h3>'+e[0]+ic('chev')+'</h3><div class="m">'+e[1]+'</div><div class="more"><div><p class="es">'+e[2]+'</p><ul>'+e[3].map(x=>'<li>'+x+'</li>').join('')+'</ul></div></div>';
 const t=()=>a.classList.toggle('open');a.onclick=t;a.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();t()}};a.classList.add('open');$('#tl').append(a)});
 /* ---- live view + like counters ----
-   Paste a Firebase Realtime Database URL below to share counts between every visitor in real time,
-   for example https://your-project-default-rtdb.firebaseio.com
-   Leave it empty and counts are kept in this browser only. */
+   Counts are shared by every visitor in real time. Backends, in order of preference:
+   1) the Claude artifact database (when this page is opened as a published artifact by a signed-in viewer),
+   2) a Firebase Realtime Database, if you paste its URL below (works for anonymous public visitors),
+   3) this browser only (localStorage), so the buttons still work offline or when nothing else is available.
+   Likes are one-per-person and are restored on every visit; views count once per visit (browser session). */
 const LIVE_DB="";
-const CN={state:{},live:false,local:{}};
+const CN={state:{},live:false,local:{},mode:'local',ro:false};
 const nf=n=>{n=+n||0;return n>=1e6?(n/1e6).toFixed(1).replace('.0','')+'M':n>=1e3?(n/1e3).toFixed(1).replace('.0','')+'k':String(n)};
 const sget=(s,k)=>{try{return s.getItem(k)}catch(e){return null}},sset=(s,k,v)=>{try{s.setItem(k,v)}catch(e){}};
 try{CN.local=JSON.parse(sget(localStorage,'cnt')||'{}')}catch(e){CN.local={}}
-const liked=id=>sget(localStorage,'liked_'+id)==='1';
-const cnt=id=>{const s=(LIVE_DB?CN.state:CN.local)[id]||{};return{v:+s.views||0,l:+s.likes||0}};
+const SAFE=k=>k!=='__proto__'&&k!=='constructor'&&k!=='prototype';
+const okId=id=>typeof id==='string'&&typeof W==='object'&&Object.prototype.hasOwnProperty.call(W,id);
+const clampN=n=>{n=+n;return isFinite(n)?Math.min(1e9,Math.max(0,Math.floor(n))):0};
+const pickB=(b,f)=>{const o={};if(b&&typeof b==='object')Object.keys(b).forEach(k=>{if(okId(k)){const x=f(b[k]);if(x)o[k]=x}});return o};
+const cleanState=raw=>{const s={};if(raw&&typeof raw==='object')Object.keys(raw).forEach(id=>{const r=raw[id];if(okId(id)&&r&&typeof r==='object')s[id]={views:clampN(r.views),likes:clampN(r.likes)}});return s};
+const DBM={uid:null,L:{},V:{}};/* L: likes docs by user id {project:true}, V: view docs by user id {project:n} */
+const liked=id=>CN.mode==='db'?!!(DBM.L[DBM.uid]||{})[id]:sget(localStorage,'liked_'+id)==='1';
+const cnt=id=>{const s=(CN.mode==='local'?CN.local:CN.state)[id]||{};return{v:+s.views||0,l:+s.likes||0}};
 const metrics=id=>'<div class="cm" data-cm="'+id+'"><span class="mv" title="Case study views">'+ic('eye')+'<b data-v>0</b> <span data-vl>views</span></span><button class="ml" type="button" data-like="'+id+'" aria-pressed="false" aria-label="Like this project">'+ic('heart')+'<b data-l>0</b><span class="sr"> likes</span></button><span class="lv" hidden title="Counts update in real time"><i></i>LIVE</span></div>';
 function paintCm(){document.querySelectorAll('[data-cm]').forEach(el=>{const id=el.dataset.cm,c=cnt(id),v=el.querySelector('[data-v]'),l=el.querySelector('[data-l]');
  [[v,c.v],[l,c.l]].forEach(([n,x])=>{if(n&&n.textContent!==nf(x)){n.textContent=nf(x);n.classList.remove('tick');void n.offsetWidth;n.classList.add('tick')}});
  const vl=el.querySelector('[data-vl]');if(vl)vl.textContent=c.v===1?'view':'views';el.querySelector('.ml').setAttribute('aria-pressed',liked(id));el.querySelector('.lv').hidden=!CN.live})}
+/* --- Claude artifact database backend: one likes doc and one views doc per person, summed live --- */
+function dbAgg(){const s={};const add=(p,k,n)=>{if(okId(p)&&n>0){const r=s[p]=s[p]||{views:0,likes:0};r[k]=Math.min(1e9,r[k]+n)}};
+ Object.keys(DBM.L).forEach(u=>{const b=DBM.L[u]||{};Object.keys(b).forEach(p=>{if(b[p]===true)add(p,'likes',1)})});
+ Object.keys(DBM.V).forEach(u=>{const b=DBM.V[u]||{};Object.keys(b).forEach(p=>add(p,'views',clampN(b[p])))});CN.state=s;paintCm()}
+let dbq=Promise.resolve();
+function dbSave(col,body){const db=DBM.db;dbq=dbq.then(()=>db.doc(col+'/'+DBM.uid).set(body)).catch(e=>{
+ if(e&&e.code==='invalid_argument'){CN.ro=true;DBM[col==='likes'?'L':'V'][DBM.uid]={};dbAgg();toast('Counts are read-only for your account')}})}
+async function initDb(){
+ try{if(!window.claude||!claude.use)return false;
+  const [db,user]=await Promise.all([claude.use('db'),claude.use('user')]);if(!db||!user)return false;
+  const uid=await user.id();if(!uid)return false;
+  try{if(user.can&&(await user.can('data.write'))===false)CN.ro=true}catch(e){}
+  DBM.db=db;DBM.uid=uid;
+  const sub=(col,key)=>new Promise(ok=>{let first=true;db.collection(col).onSnapshot(snap=>{const m=Object.create(null);snap.docs.forEach(d=>{if(SAFE(d.id))m[d.id]=pickB(d.data(),key==='L'?v=>v===true:clampN)});
+   const mine=DBM[key][uid];DBM[key]=m;if(mine&&!m[uid]&&!first)DBM[key][uid]=mine;
+   CN.mode='db';CN.live=true;dbAgg();if(first){first=false;ok(true)}},e=>{CN.live=false;paintCm();if(first){first=false;ok(false)}})});
+  const r=await Promise.all([sub('likes','L'),sub('views','V')]);
+  if(!r[0]||!r[1]){CN.mode='local';CN.live=false;paintCm();return false}
+  /* views that happened before the database answered are counted now, once */
+  (initDb.pend||[]).forEach(id=>countView(id));initDb.pend=[];
+  return true}catch(e){return false}}
+/* --- shared actions --- */
 function bump(id,key,d){
- if(LIVE_DB){fetch(LIVE_DB.replace(/\/$/,'')+'/projects/'+id+'/'+key+'.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({'.sv':{increment:d}})}).catch(()=>{});const s=CN.state[id]=CN.state[id]||{};s[key]=Math.max(0,(+s[key]||0)+d)}
+ if(CN.mode==='local'&&LIVE_DB){fetch(LIVE_DB.replace(/\/$/,'')+'/projects/'+id+'/'+key+'.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({'.sv':{increment:d}})}).catch(()=>{});const s=CN.state[id]=CN.state[id]||{};s[key]=Math.max(0,(+s[key]||0)+d)}
  else{const s=CN.local[id]=CN.local[id]||{};s[key]=Math.max(0,(+s[key]||0)+d);sset(localStorage,'cnt',JSON.stringify(CN.local))}
  paintCm()}
-function countView(id){if(sget(sessionStorage,'v_'+id))return;sset(sessionStorage,'v_'+id,'1');bump(id,'views',1)}
-function toggleLike(id,ev){const on=!liked(id);sset(localStorage,'liked_'+id,on?'1':'0');bump(id,'likes',on?1:-1);if(on&&ev&&!matchMedia('(prefers-reduced-motion:reduce)').matches)burst(ev.clientX,ev.clientY)}
-if(LIVE_DB){try{const base=LIVE_DB.replace(/\/$/,''),es=new EventSource(base+'/projects.json');
- const put=(path,data)=>{if(path==='/'){CN.state=data||{}}else{const p=path.split('/').filter(Boolean);let o=CN.state;for(let i=0;i<p.length-1;i++){o=o[p[i]]=o[p[i]]||{}}o[p[p.length-1]]=data}CN.live=true;paintCm()};
- es.addEventListener('put',e=>{const d=JSON.parse(e.data);put(d.path,d.data)});
- es.addEventListener('patch',e=>{const d=JSON.parse(e.data);Object.entries(d.data||{}).forEach(([k,v])=>put((d.path==='/'?'':d.path)+'/'+k,v))});
- es.onerror=()=>{CN.live=false;paintCm()}}catch(e){}}
+function countView(id){
+ if(!okId(id))return;
+ if(sget(sessionStorage,'v_'+id))return;
+ if(window.claude&&!DBM.uid&&!initDb.done){(initDb.pend=initDb.pend||[]).push(id);return}
+ sset(sessionStorage,'v_'+id,'1');
+ if(CN.mode==='db'){if(CN.ro)return;const b=Object.assign({},DBM.V[DBM.uid]||{});b[id]=(+b[id]||0)+1;DBM.V[DBM.uid]=b;dbAgg();dbSave('views',b)}
+ else bump(id,'views',1)}
+const lastT={};
+function toggleLike(id,ev){
+ if(!okId(id))return;const now=Date.now();if(now-(lastT[id]||0)<400)return;lastT[id]=now;
+ if(CN.mode==='db'){if(CN.ro){toast('Sign in with an account that can edit to like');return}
+  const b=Object.assign({},DBM.L[DBM.uid]||{}),on=!b[id];if(on)b[id]=true;else delete b[id];DBM.L[DBM.uid]=b;dbAgg();dbSave('likes',b);
+  if(on&&ev&&!matchMedia('(prefers-reduced-motion:reduce)').matches)burst(ev.clientX,ev.clientY);return}
+ const on=!liked(id);sset(localStorage,'liked_'+id,on?'1':'0');bump(id,'likes',on?1:-1);if(on&&ev&&!matchMedia('(prefers-reduced-motion:reduce)').matches)burst(ev.clientX,ev.clientY)}
+/* --- Firebase backend (public, anonymous visitors) --- */
+function startFirebase(){try{const base=LIVE_DB.replace(/\/$/,'');if(!/^https:\/\//.test(base))return;const es=new EventSource(base+'/projects.json');let RAW={};
+ const put=(path,data)=>{if(path==='/'){RAW=(data&&typeof data==='object')?data:{}}else{const p=path.split('/').filter(Boolean);if(!p.every(SAFE))return;let o=RAW;for(let i=0;i<p.length-1;i++){if(!o[p[i]]||typeof o[p[i]]!=='object')o[p[i]]={};o=o[p[i]]}if(data===null)delete o[p[p.length-1]];else o[p[p.length-1]]=data}CN.state=cleanState(RAW);CN.live=true;paintCm()};
+ es.addEventListener('put',e=>{try{const d=JSON.parse(e.data);put(d.path,d.data)}catch(x){}});
+ es.addEventListener('patch',e=>{try{const d=JSON.parse(e.data);Object.entries(d.data||{}).forEach(([k,v])=>put((d.path==='/'?'':d.path)+'/'+k,v))}catch(x){}});
+ es.onerror=()=>{CN.live=false;paintCm()};CN.mode='fb'}catch(e){}}
+(async()=>{const ok=await initDb();initDb.done=true;if(!ok){CN.mode='local';(initDb.pend||[]).forEach(id=>countView(id));initDb.pend=[];if(LIVE_DB){CN.mode='fb';startFirebase()}paintCm()}})();
 /* projects */
 const W={
 sumbong:{n:"SUMBONG",full:"System for Urgent Monitoring of Bullying, Offenses, and Notable Grievances using Naive Bayes Algorithm",kind:"ux",th:IMG.sbw,
@@ -1086,7 +1137,7 @@ function pane(w,t){
 function setTab(t){const w=W[curId];$$('#pc .mtab').forEach((b,i)=>{b.setAttribute('aria-selected',i===t);b.tabIndex=i===t?0:-1});const p=$('#mpane');p.innerHTML=pane(w,t);p.style.animation='none';void p.offsetWidth;p.style.animation=''}
 function setG(i){const w=W[curId],n=w.shots.length;gi=(i+n)%n;const s=w.shots[gi];$('#gimg').src=s[1];$('#gimg').alt=w.n+' '+s[0];$('#gcap').textContent=s[0]+'  ('+(gi+1)+'/'+n+')';$$('#pc .gt').forEach((b,k)=>b.setAttribute('aria-current',k===gi))}
 function show(id,tab){const w=W[id];curId=id;
- pc.innerHTML='<i class="rc a"></i><i class="rc b"></i><i class="rc c"></i><i class="rc d"></i><button class="mclose" type="button" aria-label="Close case study">ESC &#10005;</button>'
+ pc.innerHTML='<i class="rc a"></i><i class="rc b"></i><i class="rc c"></i><i class="rc d"></i><button class="mth" type="button" aria-label="Toggle light and dark mode"><svg class="i sun"><use href="#sun"/></svg><svg class="i moon"><use href="#moon"/></svg></button><button class="mclose" type="button" aria-label="Close case study">ESC &#10005;</button>'
  +'<div class="mban"><img data-zoom src="'+w.th+'" alt="'+w.n+' mockup"><div class="mbt"><span class="mkind">'+(w.kind==='data'?'Data analytics':'UI/UX &amp; Front-end')+'</span><h2>'+w.n+'</h2><p>'+w.full+'</p>'+metrics(id)+'</div></div>'
  +'<div class="mtabs" role="tablist" aria-label="Case study sections">'+TABS.map((t,i)=>'<button class="mtab" type="button" role="tab" data-t="'+i+'">'+t+'</button>').join('')+'</div><div class="mbody" id="mpane" role="tabpanel"></div>'
  +'<div class="mgal"><h3>Screens &amp; wireframes</h3><div class="gmain"><button class="gp" type="button" data-g="-1" aria-label="Previous image"'+(w.shots.length<2?' hidden':'')+'>&#8249;</button><figure><img id="gimg" data-zoom alt=""><figcaption id="gcap"></figcaption></figure><button class="gn" type="button" data-g="1" aria-label="Next image"'+(w.shots.length<2?' hidden':'')+'>&#8250;</button></div>'
@@ -1156,13 +1207,13 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers
 
 /* contact (details kept out of page text) */
 const _e=['romebaluyut','gmail.com'].join('@'),_v='+63'+'976'+'5491852';
-function go(u){const a=document.createElement('a');a.href=u;a.target='_blank';a.rel='noopener';document.body.append(a);a.click();a.remove()}
+function go(u){const a=document.createElement('a');a.href=u;a.target='_blank';a.rel='noopener noreferrer';document.body.append(a);a.click();a.remove()}
 function burst(x,y){for(let i=0;i<22;i++){const p=document.createElement('i');p.className='cfx';const a=Math.random()*6.28,d=60+Math.random()*90;p.style.cssText='left:'+x+'px;top:'+y+'px;--dx:'+Math.cos(a)*d+'px;--dy:'+(Math.sin(a)*d-40)+'px;--r:'+(Math.random()*720)+'deg;background:'+['#ff6b57','#0e7c7b','#ffd166','#3dd6c6'][i%4];document.body.append(p);setTimeout(()=>p.remove(),950)}}
 $$('[data-c]').forEach(a=>a.onclick=e=>{e.preventDefault();if(a.dataset.c==='mail')go('mailto:'+_e);else go('viber://chat?number='+encodeURIComponent(_v))});
 let sel='Systems Analyst role';const ob=$$('#opts button');ob.forEach(b=>b.onclick=()=>{ob.forEach(x=>x.setAttribute('aria-checked',x===b));sel=b.textContent});
 const cf=$('#cf');cf.elements.message.oninput=e=>$('#cnt').textContent=e.target.value.length+' characters';cf.addEventListener('input',e=>{e.target.classList.remove('bad');e.target.removeAttribute('aria-invalid')});
-function compose(){const f=new FormData(cf),n=(f.get('name')||'').trim(),e=(f.get('email')||'').trim(),m=(f.get('message')||'').trim(),su=(f.get('subject')||'').trim()||('Portfolio inquiry: '+sel);
- const chk=[['name',!n],['email',!/^\S+@\S+\.\S+$/.test(e)],['message',!m]];let first=null;
+function compose(){const f=new FormData(cf),cz=(x,l)=>String(x||'').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F\u202A-\u202E\u2066-\u2069]/g,'').trim().slice(0,l),n=cz(f.get('name'),80).replace(/\s+/g,' '),e=cz(f.get('email'),120),m=cz(f.get('message'),2000),su=cz(f.get('subject'),120).replace(/\s+/g,' ')||('Portfolio inquiry: '+sel);
+ const chk=[['name',!n],['email',!/^[^\s@<>"'()\[\]\\,;:]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/.test(e)],['message',!m]];let first=null;
  chk.forEach(([k,b])=>{const el=cf.elements[k];el.classList.toggle('bad',b);if(b){el.setAttribute('aria-invalid','true');first=first||el}});
  if(first){toast('Please complete the highlighted fields.');first.focus();return null}
  return{su:su,body:m+'\n\n---\nFrom: '+n+' ('+e+')\nAbout: '+sel}}
@@ -1293,7 +1344,12 @@ document.addEventListener('pointerdown',e=>{if(e.target.closest&&e.target.closes
 function toggleSnd(){SND.on=!SND.on;try{localStorage.setItem('snd',SND.on?'1':'0')}catch(e){}SND.armed=true;toast('UI sounds '+(SND.on?'on':'off'));if(SND.on)beep(700,1400,.1,.025)}
 /* ===== downloads ===== */
 function b64blob(b){const t=atob(b),u=new Uint8Array(t.length);for(let i=0;i<t.length;i++)u[i]=t.charCodeAt(i);return new Blob([u],{type:'application/pdf'})}
-function dl(k,x,y){const name=k==='cv'?'Baluyut_Jerome-CV.pdf':'Baluyut_Jerome-Resume.pdf',u=URL.createObjectURL(b64blob(PDF[k])),l=document.createElement('a');l.href=u;l.download=name;document.body.append(l);l.click();l.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);toast('Thanks for downloading!');if(x!=null)burst(x,y)}
+let DLC=null;(async()=>{try{if(window.claude&&claude.use)DLC=await claude.use('downloads')}catch(e){DLC=null}})();
+function pdfBytes(b){const t=atob(b),u=new Uint8Array(t.length);for(let i=0;i<t.length;i++)u[i]=t.charCodeAt(i);return u}
+function dl(k,x,y){const name=k==='cv'?'Baluyut_Jerome-CV.pdf':'Baluyut_Jerome-Resume.pdf',ok=()=>{toast('Thanks for downloading!');if(x!=null)burst(x,y)};
+ const viaLink=()=>{const u=URL.createObjectURL(new Blob([pdfBytes(PDF[k])],{type:'application/pdf'})),l=document.createElement('a');l.href=u;l.download=name;l.rel='noopener';l.style.display='none';document.body.append(l);l.click();l.remove();setTimeout(()=>URL.revokeObjectURL(u),10000);ok()};
+ if(DLC){DLC.save({filename:name,data:pdfBytes(PDF[k])}).then(ok,e=>{if(!e||e.code!=='declined')toast('Download was blocked here. Open the site in a normal browser tab to download.')});return}
+ viaLink()}
 $$('.dlb').forEach(a=>a.onclick=e=>{e.preventDefault();dl(a.dataset.k,e.clientX,e.clientY)});
 function copyMail(){const done=()=>toast('Email address copied');if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(_e).then(done,fb)}else fb();function fb(){const t=document.createElement('textarea');t.value=_e;t.style.cssText='position:fixed;opacity:0';document.body.append(t);t.select();try{document.execCommand('copy');done()}catch(e){toast(_e)}t.remove()}}
 /* ===== lightbox with zoom ===== */
@@ -1335,5 +1391,91 @@ addEventListener('keydown',e=>{
  if(pv.classList.contains('o')&&!lb.classList.contains('o')&&curId&&W[curId].shots.length>1&&!(e.target.classList&&e.target.classList.contains('mtab'))){if(e.key==='ArrowRight')setG(gi+1);else if(e.key==='ArrowLeft')setG(gi-1)}});
 </script>
 <script>document.addEventListener('pointermove',function(e){var t=e.target.closest&&e.target.closest('.tile,.card,.tl article,.rs,.ct');if(!t)return;var r=t.getBoundingClientRect();t.style.setProperty('--mx',(e.clientX-r.left)+'px');t.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});</script>
+<style>
+img,canvas{-webkit-user-drag:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.shield{position:absolute;z-index:1;background:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+@media print{img,.shield{display:none!important}}
+#brand{cursor:pointer}
+#brand:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:4px}
+.mth{position:absolute;top:16px;right:124px;z-index:7;display:grid;place-items:center;width:36px;height:36px;padding:0;color:#E2E8F0;background:rgba(4,13,18,.75);border:1px solid rgba(0,230,200,.45);border-radius:50%;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:background .2s,color .2s}
+.mth:hover,.mth:focus-visible{background:#00e6c8;color:#031013}
+.mth .i{width:17px;height:17px}.mth .moon{display:none}
+@media(max-width:520px){.mth{right:116px}}
+/* ---- light theme for the case-study detail view ---- */
+:root[data-theme="light"] #pv{background:rgba(205,222,236,.78)}
+:root[data-theme="light"] .mdl{--ink:#0b2236;--mute:#4a5f74;--accent:#0a8f95;--card:rgba(255,255,255,.9);--line:rgba(14,90,140,.3);--bg:#f3f8fc;--solid:#fff;--glow:rgba(10,165,160,.14);background:rgba(255,255,255,.97);border-color:rgba(14,90,140,.28);box-shadow:0 0 50px rgba(10,165,160,.12),0 30px 80px rgba(11,34,54,.25)}
+:root[data-theme="light"] .mdl .rc{border-color:#0a8f95;filter:none}
+:root[data-theme="light"] .mclose,:root[data-theme="light"] .mth{color:#0b2236;background:rgba(255,255,255,.9);border-color:rgba(10,143,149,.5)}
+:root[data-theme="light"] .mclose:hover,:root[data-theme="light"] .mclose:focus-visible,:root[data-theme="light"] .mth:hover,:root[data-theme="light"] .mth:focus-visible{background:#0a8f95;color:#fff}
+:root[data-theme="light"] .mth .sun{display:none}:root[data-theme="light"] .mth .moon{display:block}
+:root[data-theme="light"] .mban{border-bottom-color:rgba(14,90,140,.22)}
+:root[data-theme="light"] .mban:after{background:linear-gradient(180deg,rgba(243,248,252,.05),rgba(255,255,255,.97))}
+:root[data-theme="light"] .mbt h2{color:#0b2236}
+:root[data-theme="light"] .mbt p{color:#3b5168}
+:root[data-theme="light"] .mbt .cm .mv,:root[data-theme="light"] .mbt .cm b{color:#0b2236}
+:root[data-theme="light"] .mkind{color:#0a7378;border-color:rgba(10,143,149,.5);background:rgba(10,143,149,.1)}
+:root[data-theme="light"] .mtabs{border-bottom-color:rgba(14,90,140,.2)}
+:root[data-theme="light"] .mtab{color:#4a5f74}
+:root[data-theme="light"] .mtab:hover{color:#0b2236}
+:root[data-theme="light"] .mtab[aria-selected="true"]{color:#0a7378;border-color:#0a8f95;text-shadow:none}
+:root[data-theme="light"] .mdl h3{color:#0b2236}
+:root[data-theme="light"] .mdl .tile{background:#fff;border-color:rgba(14,90,140,.2);box-shadow:0 1px 0 rgba(14,90,140,.04)}
+:root[data-theme="light"] .mdl .ul li{color:#0b2236}
+:root[data-theme="light"] .st{background:#fff;border-color:rgba(14,90,140,.2)}
+:root[data-theme="light"] .st>b{color:#0a7378}
+:root[data-theme="light"] .st p{color:#4a5f74}
+:root[data-theme="light"] .fn{background:rgba(10,143,149,.06);border-color:rgba(10,143,149,.35);box-shadow:none}
+:root[data-theme="light"] .fn b{color:#0b2236}
+:root[data-theme="light"] .fn small{color:#4a5f74}
+:root[data-theme="light"] .fa{color:#0a8f95}
+:root[data-theme="light"] .gmain{background:rgba(226,237,246,.7);border-color:rgba(14,90,140,.22)}
+:root[data-theme="light"] .gmain img{border-color:rgba(14,90,140,.28);box-shadow:0 6px 24px rgba(11,34,54,.14)}
+:root[data-theme="light"] .gmain figcaption{color:#4a5f74}
+:root[data-theme="light"] .gp,:root[data-theme="light"] .gn{background:rgba(255,255,255,.94);border-color:rgba(10,143,149,.5);color:#0a7378}
+:root[data-theme="light"] .gp:hover,:root[data-theme="light"] .gn:hover{background:#0a8f95;color:#fff}
+:root[data-theme="light"] .gt{border-color:rgba(14,90,140,.25)}
+:root[data-theme="light"] .gt[aria-current="true"],:root[data-theme="light"] .gt:hover{border-color:#0a8f95}
+:root[data-theme="light"] .mstack span{color:#0a7378;border-color:rgba(10,143,149,.4);background:rgba(10,143,149,.08)}
+
+</style>
+<script>
+/* ---- image protection and hardening ----
+   Deterrents only: anything a browser can display can still be captured (screenshots, dev tools).
+   They stop casual saving: right-click / long-press menu, drag-out, and "open image in new tab". */
+(function(){'use strict';
+var SEL='img,canvas,.shield';
+function hit(t){return t&&t.closest&&t.closest(SEL)}
+addEventListener('contextmenu',function(e){if(hit(e.target))e.preventDefault()},true);
+addEventListener('dragstart',function(e){if(hit(e.target))e.preventDefault()},true);
+addEventListener('copy',function(e){var s=getSelection&&getSelection();if(s&&s.anchorNode&&hit(s.anchorNode.nodeType===1?s.anchorNode:s.anchorNode.parentElement)&&!String(s).trim())e.preventDefault()},true);
+/* the shield is a transparent layer above each image; clicks pass through to the image's own handlers */
+addEventListener('click',function(e){var t=e.target;if(t&&t.classList&&t.classList.contains('shield')&&t._img){e.preventDefault();e.stopPropagation();t._img.click()}},true);
+var ro=window.ResizeObserver?new ResizeObserver(function(l){l.forEach(function(r){place(r.target)})}):null;
+function place(img){var s=img._shield;if(!s)return;var vis=img.offsetWidth>0&&img.offsetHeight>0;s.style.display=vis?'':'none';if(!vis)return;
+ s.style.left=img.offsetLeft+'px';s.style.top=img.offsetTop+'px';s.style.width=img.offsetWidth+'px';s.style.height=img.offsetHeight+'px'}
+function harden(img){if(img._h||!img.parentNode)return;img._h=1;img.draggable=false;img.setAttribute('referrerpolicy','no-referrer');img.setAttribute('decoding','async');
+ var s=document.createElement('i');s.className='shield';s.setAttribute('aria-hidden','true');s._img=img;img._shield=s;
+ s.addEventListener('pointerenter',function(){s.style.cursor=getComputedStyle(img).cursor});
+ img.insertAdjacentElement('afterend',s);place(img);img.addEventListener('load',function(){place(img)});if(ro)ro.observe(img)}
+function scan(root){if(root.nodeType!==1)return;if(root.tagName==='IMG')harden(root);else if(root.querySelectorAll)root.querySelectorAll('img').forEach(harden)}
+function start(){scan(document.body);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(scan)})}).observe(document.body,{childList:true,subtree:true});
+ addEventListener('resize',function(){document.querySelectorAll('img').forEach(place)},{passive:true})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+/* every external link opens without leaking the opener or referrer */
+function links(root){(root.querySelectorAll?root.querySelectorAll('a[target=_blank]'):[]).forEach(function(a){a.rel='noopener noreferrer'})}
+document.addEventListener('DOMContentLoaded',function(){links(document)});
+/* allow only safe link schemes */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('download'))return;var h=(a.getAttribute('href')||'').trim().toLowerCase();
+ if(h&&!/^(#|https:|mailto:|viber:|tel:)/.test(h)&&!/^[\w./-]+$/.test(h)){e.preventDefault();e.stopPropagation()}},true);
+})();
+</script>
+<script>
+/* header name replays the intro; the detail view gets its own theme switch */
+(function(){var b=document.getElementById('brand');
+ function replay(){if(window.__replayIntro)window.__replayIntro()}
+ if(b){b.addEventListener('click',replay);b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();replay()}})}
+ document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.mth');if(t){var m=document.getElementById('tm');if(m)m.click()}});
+})();
+</script>
 </body>
 </html>
